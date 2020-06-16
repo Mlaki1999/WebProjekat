@@ -39,6 +39,12 @@ public class Bioskop implements Serializable {
 	@Column
 	private String email;
 	
+	public Bioskop(String naziv) {
+		super();
+		this.naziv = naziv;
+	}
+
+
 	@Column
 	@ManyToMany
 	@JoinTable(name = "menadzeriBioskopa",
@@ -55,6 +61,13 @@ public class Bioskop implements Serializable {
 	
 	@OneToMany (mappedBy = "bioskop")//sadrzi vise rasporeda jer u rasporedu je samo jedan film i ostalo vezano za njega
 	private Set<Raspored> raspored=new HashSet<>();
+
+
+	public Bioskop(Long id, String naziv) {
+		super();
+		this.id = id;
+		this.naziv = naziv;
+	}
 
 
 	public Long getId() {

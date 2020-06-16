@@ -188,6 +188,13 @@ public class Korisnik implements Serializable {
 				+ ", lozinka=" + lozinka + ", telefon=" + telefon + ", email=" + email + ", datum_rodjenja="
 				+ datum_rodjenja + ", uloga=" + uloga + ", aktivan=" + aktivan + "]";
 	}
+
+	public Korisnik( String ime, String prezime) {
+		super();
+	
+		this.ime = ime;
+		this.prezime = prezime;
+	}
     
     
     
